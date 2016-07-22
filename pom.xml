@@ -94,35 +94,6 @@
 		    <mainClass>com.vnexit.microservice.example.Service</mainClass>
 		  </configuration>
 		</plugin>
-		<plugin>
-		  <groupId>org.eclipse.jetty</groupId>
-		  <artifactId>jetty-maven-plugin</artifactId>
-		  <version>9.3.0.v20150612</version>
-		  <configuration>
-		    <scanIntervalSeconds>10</scanIntervalSeconds>
-		    <stopKey>foo</stopKey>
-		    <stopPort>9999</stopPort>
-		  </configuration>
-		  <executions>
-		    <execution>
-		      <id>start-jetty</id>
-		      <phase>pre-integration-test</phase>
-		      <goals>
-		        <goal>start</goal>
-		      </goals>
-		      <configuration>
-		        <scanIntervalSeconds>0</scanIntervalSeconds>
-		      </configuration>
-		    </execution>
-		    <execution>
-		      <id>stop-jetty</id>
-		      <phase>post-integration-test</phase>
-		       <goals>
-		         <goal>stop</goal>
-		       </goals>
-		     </execution>
-		  </executions>
-		</plugin>
   	</plugins>
   </build>
 </project>
