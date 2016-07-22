@@ -92,10 +92,6 @@
   </executions>
   <configuration>
     <mainClass>com.vnexit.microservice.example.Service</mainClass>
-    <arguments>
-      <argument>foo</argument>
-      <argument>bar</argument>
-    </arguments>
   </configuration>
 </plugin>
   	</plugins>
