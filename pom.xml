@@ -9,7 +9,6 @@
 
   <name>MicroserviceExample</name>
   <url>http://maven.apache.org</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -77,4 +76,28 @@
 		<version>4.3.6</version>
 	</dependency>
   </dependencies>
+   
+  <build>
+  	<plugins>
+  		<plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>exec-maven-plugin</artifactId>
+  <version>1.2.1</version>
+  <executions>
+    <execution>
+      <goals>
+        <goal>java</goal>
+      </goals>
+    </execution>
+  </executions>
+  <configuration>
+    <mainClass>com.vnexit.microservice.example.Service</mainClass>
+    <arguments>
+      <argument>foo</argument>
+      <argument>bar</argument>
+    </arguments>
+  </configuration>
+</plugin>
+  	</plugins>
+  </build>
 </project>
